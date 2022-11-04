@@ -1,23 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import ElasticSlider from './ElasticSlider';
+import React, { useState } from "react";
+import SideSlider from './SideSlider';
+
+
 
 function App() {
+  const [Card, setCards] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App">            
+      <h1>Elastic Carousel</h1>
+      <ElasticSlider />
+      <br />
+      <SideSlider />
     </div>
   );
 }
